@@ -1,7 +1,7 @@
 <?
 
 require("lib/conf.inc");
-$titulo = "Gestión de Usuarios de Windows";
+$titulo = "GestiÃ³n de Usuarios de Windows";
 
 top_barra_menu();
 
@@ -15,7 +15,7 @@ echo "<h1>Creacion del PCV personal en VMWARE ESXi</h1>";
 
 echo "<BR>";
 
-$pass=descifra_simple($CFG->ADadminpwd);
+$pass=xxxxx;
 $pcv="PCV-".strtoupper($usuario);
 
 // Primero intentamos detectar si hay algun error en el ID del usuario (por lo menos que exista)
@@ -33,7 +33,7 @@ echo "Procedemos...<BR><BR><BR>";
 echo "<B>Creando el objeto del PCV personal del usuario en AD...</B><BR>";
 
 $comando="DSADD COMPUTER cn=$pcv,ou=VDI_W11,ou=PCsW10,ou=Equipos,dc=boe,dc=int ";
-$salida=shell_exec("export SSHPASS=$pass ; sshpass -e ssh $CFG->ADadmin@deploy \"$comando\" 2>&1 ");
+$salida=shell_exec("export SSHPASS=$pass ; sshpass -e ssh $CFG->xxxx@xxxx \"$comando\" 2>&1 ");
 
 echo "Resultado de la creacion del objeto PCV en AD:<BR>";
 echo "Comando:<B>$comando</B><BR>";
@@ -43,7 +43,7 @@ echo "</PRE>";
 
 echo "<BR><BR>\n";
 
-echo "<B>AVISO: El siguiente proceso puede tardar hasta 5 minutos. Ten paciencia y no abortes la carga de la página.</B><BR>";
+echo "<B>AVISO: El siguiente proceso puede tardar hasta 5 minutos. Ten paciencia y no abortes la carga de la pÃ¡gina.</B><BR>";
 
 // Creacion del PCV via PowerShell
 // pwsh -Command ./vm_crea_pcv.ps1 $i
@@ -192,7 +192,7 @@ echo "<BR><BR>\n";
 
 // Boton para la actualizacion del DHCP en una ventana aparte...
 
-echo "<B>IMPORTANTE:</B> Si todo lo anterior es correcto, puede proceder con la <B>actualización de los ficheros DHCP<B>,<BR>
+echo "<B>IMPORTANTE:</B> Si todo lo anterior es correcto, puede proceder con la <B>actualizaciÃ³n de los ficheros DHCP<B>,<BR>
 ejecutando el siguiente enlace en una nueva ventana.<BR>";
 
 
@@ -202,7 +202,7 @@ ejecutando el siguiente enlace en una nueva ventana.<BR>";
 
 echo "<BR><BR>\n";
 
-echo "<B>Si la actualización de DHCP ha ido bien, puede proceder con el <B>arranque del PCV recien creado<B>,<BR>
+echo "<B>Si la actualizaciÃ³n de DHCP ha ido bien, puede proceder con el <B>arranque del PCV recien creado<B>,<BR>
 ejecutando el siguiente enlace en una nueva ventana.<BR>";
 
     echo "<form action=\"arranca_pcv.php\" method=post target=\"_blank\">";
@@ -232,4 +232,5 @@ pie_barra_menu();
 
 
 ?>
+
 
