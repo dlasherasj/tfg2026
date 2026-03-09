@@ -1,7 +1,7 @@
 <?
 
 require("lib/conf.inc");
-$titulo = "Gestión de Usuarios de Windows";
+$titulo = "GestiÃ³n de Usuarios de Windows";
 
 top_barra_menu();
 
@@ -28,7 +28,7 @@ echo "<BR>\n";
 ob_flush();
 flush();
 
-$ruta_scripts = "/mnt/intweb/scripts/sistemas";
+$ruta_scripts = "/scripts/";
 $pcv="PCV-".strtoupper($usuario);
 $current_user = trim(shell_exec('whoami'));
 
@@ -45,4 +45,5 @@ pie_barra_menu();
 
 
 ?>
+
 
