@@ -13,6 +13,7 @@ Repositorio de scripts, configuraciones y extractos de código asociados al Trab
 | `actualiza_conf_correo.php` | Script php que lanza el script shell que actualiza las direcciones de correo en postfix. | 4.4.7 |
 | `arranca_pcv.php` | Script php que arranca un PCV tras ser creado. | 4.5.3 |
 | `crea_pcv_usuario.php` | Script php que lanza la creación del PCV del usuario. | 4.5.3 |
+| `crea_usuario_windows.php` | Script PHP que ejecuta la creación de la cuenta de usuario en Windows/AD. | 4.5.3 |
 | `crea_pcvs.sh` | Script bash para lanzar la creacion en batch de varios PCVs | 4.5.3 |
 | `customize.cmd` | Script de personalización que se ejecuta durante el primer arranque del escritorio virtual desplegado. Configura permisos RDP para el usuario asignado, establece la etiqueta del volumen C:\ y se autodestruye tras la ejecución. | 4.1.4 |
 | `debloat_w11.ps1` | Script de limpiado de configuraciones de Windows 11 | 4.1.2 |
