@@ -17,7 +17,7 @@ Repositorio de scripts, configuraciones y extractos de código asociados al Trab
 | `crea_pcvs.sh` | Script bash para lanzar la creacion en batch de varios PCVs | 4.5.3 |
 | `customize.cmd` | Script de personalización que se ejecuta durante el primer arranque del escritorio virtual desplegado. Configura permisos RDP para el usuario asignado, establece la etiqueta del volumen C:\ y se autodestruye tras la ejecución. | 4.1.4 |
 | `debloat_w11.ps1` | Script de limpiado de configuraciones de Windows 11 | 4.1.2 |
-| `desplegar_aplicacion.php` | Script php que permite al personal de helpdesk instalar aplicaciones sin entrar en PDQ | 4.9.2 |
+| `desplegar_aplicacion.php` | Script php que permite al personal de helpdesk instalar aplicaciones sin entrar en PDQ | 4.9.3 |
 | `fix_sysprep.ps1` | Script Powershell que arregla alguno de los problemas de la plantilla cuando no funciona sysprep | 4.1.6 |
 | `generar_ldf.php` | Script php que crea un fichero ldf para generar el usuario en el dominio | 4.5.3 |
 | `insert_usuario.php` | Script php que ejecuta la creación de un usuario con el fichero ldf creado en el script generar_ldf.php | 4.5.3 |
