@@ -1,0 +1,72 @@
+# Lista de paquetes generales a eliminar
+Write-Host "-- Eliminando apps preinstaladas"
+$packages = @(
+ "CoPilot",
+ "549981C3F5F10",
+ "WebExperience",
+ "BingNews",
+ "BingWeather",
+ "BingSearch",
+ "BingSports",
+ "BingFinance",
+ "Clipchamp",
+ "DevHome",
+ "FeedbackHub",
+ "GetHelp",
+ "StartExperiencesApp",
+ "Phone",
+ "PowerAutomateDesktop",
+ "Todos",
+ "WindowsCamera",
+ "WindowsSoundRecorder",
+ "crossdevice",
+ "getstarted",
+ "Solitaire",
+ "GamingApp",
+ "XboxApp",
+ "XboxIdentityProvider",
+ "XboxSpeechToTextOverlay",
+ "Microsoft.Xbox.TCUI",
+ "XboxGameOverlay",
+ "XboxGamingOverlay",
+ "king.com",
+ "shazam",
+ "Flipboard",
+ "Twitter",
+ "iHeartRadio",
+ "Duolingo",
+ "AdobePhotoshopExpress",
+ "Pandora",
+ "EclipseManager",
+ "ActiproSoftwareLLC",
+ "Spotify",
+ "whatsapp",
+ "MicrosoftFamily",
+ "NarratorQuickStart",
+ "3DBuilder",
+ "Microsoft3DViewer",
+ "MicrosoftOfficeHub",
+ "Office.OneNote",
+ "Office.Sway",
+ "Messaging",
+ "MixedReality.Portal",
+ "WindowsAlarms",
+ "WindowsCamera",
+ "WindowsMaps",
+ "MinecraftUWP",
+ "People",
+ "Wallet",
+ "Print3D",
+ "OneConnect",
+ "windowscommunicationsapps",
+ "SkypeApp",
+ "GroupMe10"
+)
+foreach ($pkg in $packages) {
+    Write-Host "== Eliminando paquete: $pkg =="
+    # Quitar de todos los usuarios existentes
+    Get-AppxPackage -AllUsers *$pkg* | Remove-AppxPackage -ErrorAction SilentlyContinue
+    # Quitar de la imagen provisionada (para usuarios nuevos)
+    Get-AppxProvisionedPackage -Online | Where-Object { $_.PackageName -like "*$pkg*" } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue
+}
+Write-Host "-- Eliminadas apps preinstaladas"
