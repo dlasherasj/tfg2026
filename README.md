@@ -31,7 +31,7 @@ Repositorio de scripts, configuraciones y extractos de código asociados al Trab
 | `vm_get_state.ps1` | Script powercli que devuelve si un PCV está encendido o no | 4.5.3 |
 | `vm_restart_vm.ps1` | Script que reinicia de forma ordenada un PCV | 4.5.5 |
 | `vm_start_vm.ps1` | Script que arranca un PCV | 4.5.3 |
-
+| `vpnfase3.ps1` | Script que arranca un PCV | 4.8.6 |
 
 ---
 
